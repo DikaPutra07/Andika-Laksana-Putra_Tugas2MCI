@@ -16,7 +16,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/landing.html');
+    }
+);
 app.get('/test', (req, res) => res.send('Hello Camin MCI Anjay!'));
 
 //app.use('/mahasiswa', mahasiswaRoute);
