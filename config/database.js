@@ -1,23 +1,32 @@
+const { db_name } = require("./environment");
+const { db_user } = require("./environment");
+// const { db_pass } = require("./environment");
+const { db_host } = require("./environment");
+const { db_port } = require("./environment");
+
 module.exports = {
   "development": {
-    "username": "root",
+    "username": db_user,
     "password": null,
-    "database": "db_nst",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "database": db_name,
+    "host": db_host,
+    "dialect": "mysql",
+    "port": db_port
   },
   "test": {
-    "username": "root",
+    "username": db_user,
     "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "database": db_name,
+    "host": db_host,
+    "dialect": "mysql",
+    "port": db_port
   },
   "production": {
-    "username": "root",
+    "username": db_user,
     "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "database": db_name,
+    "host": db_host,
+    "dialect": "mysql",
+    "port": db_port
   }
 }
