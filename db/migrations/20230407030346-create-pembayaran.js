@@ -24,18 +24,10 @@ module.exports = {
       id_bank: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {
-          model: 'list_bank',
-          key: 'id'
-        }
       },
       id_status: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {
-          model: 'status_pembayaran',
-          key: 'id'
-        }
       },
       createdAt: {
         allowNull: false,
